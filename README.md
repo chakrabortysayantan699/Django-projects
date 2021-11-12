@@ -64,11 +64,30 @@
    - now we can see a great UI with our all associate files
 
 9. **Now our aim is to dynamically change content of without touch the code**
-   - For this we need to go in some steps
+  - For this we need to go in some steps
+     - first we have to create the models in **models.py** of the app
+     - and create the class that will contents those varible
+     - now we can use those variable in the **views.py**
+10. **We have to connect with our database**
+    - so we have to edit settings.py of project for giving username and outher credential's stuff
+   ```python
+   DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_first',
+        'USER':'root',
+        'PASSWORD':'papon728**',
+        'HOST':'localhost',
+        'PORT':'3306'
+     }
+  }
+  ```
+11. **control related things have to done in Admin panel for this kindly go with refference** 
 
-|   **status**  |
-|---------------|
-|**In progress**|
+# Refference 🚀
+**[**YouTube📺**](https://youtu.be/OTmQOjsl0eg)**
+
+
 
 
 
