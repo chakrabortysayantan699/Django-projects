@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sign up page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        
+        <!-- Add your site or application content here -->
+        <p><b>New user register here</b></p>
+        <form action="sign_up" method="POST"> 
+            {% csrf_token %}
+        Give Firstname:<input type="text" name="firstname"><br><br>
+        Give Lastname:<input type="text" name="lastname"><br><br>
+        Give Username:<input type="text" name="username"><br><br>
+        Give Emailid:<input type="email" name="email"><br><br>
+        Give Password:<input type="password" name="password1"><br><br>
+        Confirm Password:<input type="password" name="password2"><br><br>
+        <input type="submit" name="submit1">
+        </form>
+        <div>
+            {% for i in messages %}
+            <b>{{i}}</b>
+            {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{% load static%}
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Log in page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
+    </head>
+    <body>
+        
+        <!-- Add your site or application content here -->
+        <p>Please login here</p>
+        <form action="login" method="POST">
+        	{% csrf_token %}
+        	Give username:<input type="text" name="username">
+        	Enter Passwoeds:<input type="password" name="password">
+        	<input type="submit" name="submit2">
+        	
+        </form>
+        <div>
+            {% for i in messages %}
+            <b>{{i}}</b>
+            {% endfor %}
+        </div>
+        	
+        <p>New user for register click <a href="sign_up">Here</a></p>
+    </body>
+</html>
